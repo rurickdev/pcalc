@@ -1,13 +1,42 @@
+//package pcalc;
+
 public class Pcalc{
+
+  //public Polinomio p = new Polinomio();
+
   public static void main(String[] args){
-    System.out.println("operacion [0] " + args[0]);
-    System.out.println("Polinomio 1 [1]" + args[1]);
-    System.out.println("Polinomio 2 [2] " + args[2]);
+
+    comprobarOperaciones(args[0]);
   }
 
   //Comprueba que sean operacoinea validas
-  public void comprobarOperaciones(String operaciones){
-    
+  public static void comprobarOperaciones(String operaciones){
+
+    char caracter = Character.toLowerCase(operaciones.charAt(1));
+
+    switch (caracter) {
+      case 's':
+        System.out.println("Sumar");
+        break;
+      case 'r':
+        System.out.println("Restar");
+        break;
+      case 'm':
+        System.out.println("Multiplicar");
+        break;
+      case 'd':
+        System.out.println("Derivar");
+        break;
+      case 'i':
+        System.out.println("Integrar");
+        break;
+      case 'h':
+        System.out.println("Ayuda");
+        break;
+      default :
+        mensajeError();
+        break;
+    }
   }
 
   //Imprime mensaje de error
@@ -15,3 +44,12 @@ public class Pcalc{
     System.out.println("Error");
   }
 }
+
+/*To-Do
+ *Leer el Polinomio
+ *  Comprobar Polinomio bien escrito
+ *Operar los Polinomios
+ *Regresar el resultado
+ *Mensaje de ayuda para --help -h
+
+//Objeto Polinomio

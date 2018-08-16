@@ -1,3 +1,5 @@
+package pcalc;
+
 //objeto de tipo Polinomio
 
 /*
@@ -6,3 +8,11 @@
  *
  *
  */
+ public class Polinomio{
+
+    String operacion = new String();
+
+    public void Polinomio(){
+    }
+
+}
